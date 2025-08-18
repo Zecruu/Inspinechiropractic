@@ -1,0 +1,30 @@
+{
+  "name": "inspine-chiropractic-website",
+  "version": "1.0.0",
+  "description": "Professional chiropractic website for Inspine Chiropractic with interactive pain diagram",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server . -p 3000 -a 0.0.0.0 -o --cors",
+    "start": "http-server . -p 8080 -a 0.0.0.0",
+    "build": "echo 'Static website - no build required'",
+    "serve": "http-server . -p 5000",
+    "vercel-build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "chiropractic",
+    "healthcare",
+    "website",
+    "interactive",
+    "pain-diagram"
+  ],
+  "author": "Nuvana Web Development",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zecruu/Inspinechiropractic.git"
+  },
+  "homepage": "https://github.com/Zecruu/Inspinechiropractic#readme"
+}

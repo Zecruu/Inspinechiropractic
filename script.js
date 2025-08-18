@@ -100,42 +100,105 @@ class ServiceCarousel {
     }
 }
 
-// Pain Point Data
+// Pain Point Data with bilingual support
 const painPointData = {
     neck: {
-        title: "Dolor de Cuello",
-        causes: "El dolor cervical frecuentemente es consecuencia de una postura inadecuada, uso prolongado de pantallas, lesiones por latigazo cervical o condiciones degenerativas. Estas situaciones pueden provocar tensión muscular, compresión de nervios y desalineación de la columna cervical, afectando significativamente su calidad de vida.",
-        treatment: "Nuestros ajustes quiroprácticos especializados y la terapia de descompresión ayudan a realinear su columna cervical, reducir la presión sobre los nervios y relajar los músculos tensos. Complementamos el tratamiento con terapia láser avanzada para reducir la inflamación y acelerar la recuperación del área afectada."
+        title: {
+            es: "Dolor de Cuello",
+            en: "Neck Pain"
+        },
+        causes: {
+            es: "El dolor cervical frecuentemente es consecuencia de una postura inadecuada, uso prolongado de pantallas, lesiones por latigazo cervical o condiciones degenerativas. Estas situaciones pueden provocar tensión muscular, compresión de nervios y desalineación de la columna cervical, afectando significativamente su calidad de vida.",
+            en: "Neck pain often results from poor posture, prolonged screen use, whiplash injuries, or degenerative conditions. These situations can lead to muscle tension, nerve compression, and cervical spine misalignment, significantly affecting your quality of life."
+        },
+        treatment: {
+            es: "Nuestros ajustes quiroprácticos especializados y la terapia de descompresión ayudan a realinear su columna cervical, reducir la presión sobre los nervios y relajar los músculos tensos. Complementamos el tratamiento con terapia láser avanzada para reducir la inflamación y acelerar la recuperación del área afectada.",
+            en: "Our specialized chiropractic adjustments and decompression therapy help realign your cervical spine, reduce nerve pressure, and relax tense muscles. We complement treatment with advanced laser therapy to reduce inflammation and accelerate recovery of the affected area."
+        }
     },
     midback: {
-        title: "Dolor de Espalda Media",
-        causes: "El dolor en la espalda media generalmente se origina por diversos factores como postura incorrecta, movimientos repetitivos, tensión muscular o problemas en los discos vertebrales. Esta zona es particularmente vulnerable durante periodos prolongados de sedestación y por una ergonomía inadecuada en el lugar de trabajo.",
-        treatment: "Ofrecemos atención quiropráctica específica para mejorar la movilidad de la columna torácica, combinada con terapia manual para tratar la tensión muscular. Nuestras técnicas avanzadas de descompresión ayudan a aliviar la presión en los discos vertebrales y nervios de esta región."
+        title: {
+            es: "Dolor de Espalda Media",
+            en: "Mid Back Pain"
+        },
+        causes: {
+            es: "El dolor en la espalda media generalmente se origina por diversos factores como postura incorrecta, movimientos repetitivos, tensión muscular o problemas en los discos vertebrales. Esta zona es particularmente vulnerable durante periodos prolongados de sedestación y por una ergonomía inadecuada en el lugar de trabajo.",
+            en: "Mid back pain typically stems from various factors such as poor posture, repetitive movements, muscle tension, or spinal disc problems. This area is particularly vulnerable during prolonged periods of sitting and due to inadequate workplace ergonomics."
+        },
+        treatment: {
+            es: "Ofrecemos atención quiropráctica específica para mejorar la movilidad de la columna torácica, combinada con terapia manual para tratar la tensión muscular. Nuestras técnicas avanzadas de descompresión ayudan a aliviar la presión en los discos vertebrales y nervios de esta región.",
+            en: "We offer specific chiropractic care to improve thoracic spine mobility, combined with manual therapy to address muscle tension. Our advanced decompression techniques help relieve pressure on spinal discs and nerves in this region."
+        }
     },
     lowerback: {
-        title: "Dolor de Espalda Baja",
-        causes: "El dolor lumbar es una de las condiciones más comunes, causado por hernias discales, ciática, tensión muscular, problemas posturales o degeneración articular. Puede ser resultado de actividades físicas intensas, levantamiento inadecuado de objetos o largos períodos de inactividad.",
-        treatment: "Utilizamos técnicas quiroprácticas avanzadas para corregir desalineaciones vertebrales, terapia de descompresión espinal para aliviar la presión en los discos y nervios, y ejercicios de rehabilitación personalizados para fortalecer la musculatura de soporte lumbar."
+        title: {
+            es: "Dolor de Espalda Baja",
+            en: "Lower Back Pain"
+        },
+        causes: {
+            es: "El dolor lumbar es una de las condiciones más comunes, causado por hernias discales, ciática, tensión muscular, problemas posturales o degeneración articular. Puede ser resultado de actividades físicas intensas, levantamiento inadecuado de objetos o largos períodos de inactividad.",
+            en: "Lower back pain is one of the most common conditions, caused by disc herniation, sciatica, muscle tension, postural problems, or joint degeneration. It can result from intense physical activities, improper lifting, or long periods of inactivity."
+        },
+        treatment: {
+            es: "Utilizamos técnicas quiroprácticas avanzadas para corregir desalineaciones vertebrales, terapia de descompresión espinal para aliviar la presión en los discos y nervios, y ejercicios de rehabilitación personalizados para fortalecer la musculatura de soporte lumbar.",
+            en: "We use advanced chiropractic techniques to correct vertebral misalignments, spinal decompression therapy to relieve pressure on discs and nerves, and personalized rehabilitation exercises to strengthen lumbar support muscles."
+        }
     },
     leftshoulder: {
-        title: "Dolor de Hombro Izquierdo",
-        causes: "El dolor de hombro puede originarse por lesiones del manguito rotador, bursitis, tendinitis, capsulitis adhesiva (hombro congelado) o problemas cervicales que irradian hacia el hombro. Actividades repetitivas o traumatismos pueden desencadenar estas condiciones.",
-        treatment: "Aplicamos ajustes quiroprácticos específicos para la articulación del hombro y columna cervical, terapia manual para mejorar la movilidad articular, y técnicas de tejidos blandos para reducir la inflamación y restaurar la función normal del hombro."
+        title: {
+            es: "Dolor de Hombro Izquierdo",
+            en: "Left Shoulder Pain"
+        },
+        causes: {
+            es: "El dolor de hombro puede originarse por lesiones del manguito rotador, bursitis, tendinitis, capsulitis adhesiva (hombro congelado) o problemas cervicales que irradian hacia el hombro. Actividades repetitivas o traumatismos pueden desencadenar estas condiciones.",
+            en: "Shoulder pain can originate from rotator cuff injuries, bursitis, tendinitis, adhesive capsulitis (frozen shoulder), or cervical problems that radiate to the shoulder. Repetitive activities or trauma can trigger these conditions."
+        },
+        treatment: {
+            es: "Aplicamos ajustes quiroprácticos específicos para la articulación del hombro y columna cervical, terapia manual para mejorar la movilidad articular, y técnicas de tejidos blandos para reducir la inflamación y restaurar la función normal del hombro.",
+            en: "We apply specific chiropractic adjustments to the shoulder joint and cervical spine, manual therapy to improve joint mobility, and soft tissue techniques to reduce inflammation and restore normal shoulder function."
+        }
     },
     rightshoulder: {
-        title: "Dolor de Hombro Derecho",
-        causes: "Similar al hombro izquierdo, el dolor puede ser causado por lesiones del manguito rotador, inflamación de las bursas, tendinitis, o problemas cervicales. El uso excesivo, posturas inadecuadas o traumatismos son factores contribuyentes comunes.",
-        treatment: "Proporcionamos tratamiento quiropráctica integral que incluye ajustes articulares, terapia de tejidos blandos, y técnicas de movilización para restaurar el rango de movimiento y reducir el dolor en la articulación del hombro."
+        title: {
+            es: "Dolor de Hombro Derecho",
+            en: "Right Shoulder Pain"
+        },
+        causes: {
+            es: "Similar al hombro izquierdo, el dolor puede ser causado por lesiones del manguito rotador, inflamación de las bursas, tendinitis, o problemas cervicales. El uso excesivo, posturas inadecuadas o traumatismos son factores contribuyentes comunes.",
+            en: "Similar to the left shoulder, pain can be caused by rotator cuff injuries, bursa inflammation, tendinitis, or cervical problems. Overuse, inadequate postures, or trauma are common contributing factors."
+        },
+        treatment: {
+            es: "Proporcionamos tratamiento quiropráctica integral que incluye ajustes articulares, terapia de tejidos blandos, y técnicas de movilización para restaurar el rango de movimiento y reducir el dolor en la articulación del hombro.",
+            en: "We provide comprehensive chiropractic treatment including joint adjustments, soft tissue therapy, and mobilization techniques to restore range of motion and reduce pain in the shoulder joint."
+        }
     },
     leftknee: {
-        title: "Dolor de Rodilla Izquierda",
-        causes: "El dolor de rodilla puede resultar de lesiones de ligamentos, problemas de menisco, artritis, condromalacia rotuliana o desalineaciones biomecánicas. Factores como el sobrepeso, actividades deportivas o desgaste articular pueden contribuir al problema.",
-        treatment: "Ofrecemos evaluación biomecánica completa, ajustes de cadera y pelvis para mejorar la alineación, terapia de tejidos blandos para reducir la tensión muscular, y ejercicios de fortalecimiento específicos para estabilizar la articulación de la rodilla."
+        title: {
+            es: "Dolor de Rodilla Izquierda",
+            en: "Left Knee Pain"
+        },
+        causes: {
+            es: "El dolor de rodilla puede resultar de lesiones de ligamentos, problemas de menisco, artritis, condromalacia rotuliana o desalineaciones biomecánicas. Factores como el sobrepeso, actividades deportivas o desgaste articular pueden contribuir al problema.",
+            en: "Knee pain can result from ligament injuries, meniscus problems, arthritis, chondromalacia patella, or biomechanical misalignments. Factors such as overweight, sports activities, or joint wear can contribute to the problem."
+        },
+        treatment: {
+            es: "Ofrecemos evaluación biomecánica completa, ajustes de cadera y pelvis para mejorar la alineación, terapia de tejidos blandos para reducir la tensión muscular, y ejercicios de fortalecimiento específicos para estabilizar la articulación de la rodilla.",
+            en: "We offer comprehensive biomechanical evaluation, hip and pelvis adjustments to improve alignment, soft tissue therapy to reduce muscle tension, and specific strengthening exercises to stabilize the knee joint."
+        }
     },
     rightknee: {
-        title: "Dolor de Rodilla Derecha",
-        causes: "Las causas incluyen lesiones deportivas, artritis, problemas de alineación, desgaste del cartílago o tensión en los músculos circundantes. La biomecánica alterada de cadera y pelvis también puede contribuir al dolor de rodilla.",
-        treatment: "Realizamos análisis postural y biomecánico, ajustes quiroprácticos para corregir desalineaciones que afectan la rodilla, terapia manual para mejorar la movilidad, y programas de ejercicios terapéuticos para fortalecer y estabilizar la articulación."
+        title: {
+            es: "Dolor de Rodilla Derecha",
+            en: "Right Knee Pain"
+        },
+        causes: {
+            es: "Las causas incluyen lesiones deportivas, artritis, problemas de alineación, desgaste del cartílago o tensión en los músculos circundantes. La biomecánica alterada de cadera y pelvis también puede contribuir al dolor de rodilla.",
+            en: "Causes include sports injuries, arthritis, alignment problems, cartilage wear, or tension in surrounding muscles. Altered hip and pelvis biomechanics can also contribute to knee pain."
+        },
+        treatment: {
+            es: "Realizamos análisis postural y biomecánico, ajustes quiroprácticos para corregir desalineaciones que afectan la rodilla, terapia manual para mejorar la movilidad, y programas de ejercicios terapéuticos para fortalecer y estabilizar la articulación.",
+            en: "We perform postural and biomechanical analysis, chiropractic adjustments to correct misalignments affecting the knee, manual therapy to improve mobility, and therapeutic exercise programs to strengthen and stabilize the joint."
+        }
     }
 };
 
@@ -191,9 +254,12 @@ class PainDiagram {
         const data = painPointData[painType];
         if (!data) return;
         
-        this.painTitle.textContent = data.title;
-        this.painCauses.textContent = data.causes;
-        this.painTreatment.textContent = data.treatment;
+        // Get current language from the language system
+        const currentLang = document.querySelector('.lang-btn.active').getAttribute('data-lang') || 'es';
+        
+        this.painTitle.textContent = data.title[currentLang];
+        this.painCauses.textContent = data.causes[currentLang];
+        this.painTreatment.textContent = data.treatment[currentLang];
         
         this.popup.classList.add('active');
         document.body.style.overflow = 'hidden';
