@@ -761,6 +761,7 @@ body {
 
 .about-image {
     position: relative;
+    display: none; /* Hide empty image container */
 }
 
 .about-image img {
