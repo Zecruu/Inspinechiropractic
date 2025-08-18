@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspine Chiropractic | Dra. Nylet Ortiz - Quiropráctica Profesional en Puerto Rico</title>
+    <meta name="description" content="Quiropráctica personalizada en un ambiente profesional, con citas el mismo día para promover una vida más saludable y equilibrada en Puerto Rico.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Inspine Logo.png" alt="Inspine Chiropractic" class="logo-img">
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#inicio" class="nav-link" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="#nosotros" class="nav-link" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a>
+                <a href="#servicios" class="nav-link" data-es="Servicios" data-en="Services">Servicios</a>
+                <a href="#contacto" class="nav-link" data-es="Contacto" data-en="Contact">Contacto</a>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="tel:+1-787-340-3222" class="nav-cta">
+                    <i class="fas fa-phone"></i>
+                    <span data-es="LLAMA YA" data-en="CALL NOW">LLAMA YA</span>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="Inspine Logo.png" alt="Inspine Chiropractic" class="hero-logo-img">
+            </div>
+            <h1 class="hero-title">Inspine Chiropractic</h1>
+            <p class="hero-slogan">Alineando tu columna, transformando tu vida</p>
+            <p class="hero-subtitle">Quiropráctica personalizada con la Dra. Nylet Ortiz</p>
+            <div class="hero-buttons">
+                <a href="tel:+1-787-340-3222" class="btn btn-primary">
+                    <i class="fas fa-phone"></i>
+                    Agendar Cita
+                </a>
+                <a href="#servicios" class="btn btn-secondary">
+                    <i class="fas fa-arrow-down"></i>
+                    Conocer Servicios
+                </a>
+            </div>
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Citas el mismo día</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-md"></i>
+                    <span>Especialista certificada</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Carolina, Puerto Rico</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span>Desliza para explorar</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Tratamientos especializados para tu bienestar</p>
+            </div>
+            
+            <div class="services-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carousel-track">
+                        <div class="service-card active">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ajustes Quiroprácticos">
+                                <div class="service-tag">Especialidad</div>
+                            </div>
+                            <div class="service-content">
+                                <h3>Ajustes Quiroprácticos</h3>
+                                <p>Corrección precisa de la columna vertebral para aliviar el dolor y mejorar la movilidad.</p>
+                                <div class="service-benefits">
+                                    <span><i class="fas fa-check"></i> Alivio del dolor</span>
+                                    <span><i class="fas fa-check"></i> Mejor movilidad</span>
+                                    <span><i class="fas fa-check"></i> Corrección postural</span>
+                                </div>
+                                <a href="#contacto" class="service-btn">Más información</a>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Terapia Manual">
+                                <div class="service-tag">Terapia</div>
+                            </div>
+                            <div class="service-content">
+                                <h3>Terapia Manual</h3>
+                                <p>Técnicas manuales especializadas para tratar tensiones musculares y articulares.</p>
+                                <div class="service-benefits">
+                                    <span><i class="fas fa-check"></i> Relajación muscular</span>
+                                    <span><i class="fas fa-check"></i> Mejora circulación</span>
+                                    <span><i class="fas fa-check"></i> Reducción estrés</span>
+                                </div>
+                                <a href="#contacto" class="service-btn">Más información</a>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rehabilitación">
+                                <div class="service-tag">Rehabilitación</div>
+                            </div>
+                            <div class="service-content">
+                                <h3>Rehabilitación</h3>
+                                <p>Programas personalizados de ejercicios para fortalecer y recuperar la función.</p>
+                                <div class="service-benefits">
+                                    <span><i class="fas fa-check"></i> Fortalecimiento</span>
+                                    <span><i class="fas fa-check"></i> Prevención lesiones</span>
+                                    <span><i class="fas fa-check"></i> Recuperación completa</span>
+                                </div>
+                                <a href="#contacto" class="service-btn">Más información</a>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Evaluación Postural">
+                                <div class="service-tag">Evaluación</div>
+                            </div>
+                            <div class="service-content">
+                                <h3>Evaluación Postural</h3>
+                                <p>Análisis completo de la postura para identificar y corregir desequilibrios.</p>
+                                <div class="service-benefits">
+                                    <span><i class="fas fa-check"></i> Análisis detallado</span>
+                                    <span><i class="fas fa-check"></i> Plan personalizado</span>
+                                    <span><i class="fas fa-check"></i> Prevención problemas</span>
+                                </div>
+                                <a href="#contacto" class="service-btn">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-indicators" id="indicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                        <span class="indicator" data-slide="3"></span>
+                    </div>
+                    <button class="carousel-btn next" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Pain Diagram Section -->
+    <section class="pain-diagram" id="dolor">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Dónde Siente Dolor?</h2>
+                <p>Haga clic en el área donde experimenta molestias para obtener información específica</p>
+            </div>
+            
+            <div class="pain-diagram-container">
+                <div class="interactive-image-container">
+                    <img src="interactive-pain-diagram.jpeg" alt="Diagrama interactivo del cuerpo para identificar puntos de dolor" class="interactive-image">
+                    
+                    <!-- Pain Points - Adjusted positions based on actual image -->
+                    <div class="pain-point" data-pain="neck" data-top="15%" data-left="60%" title="Dolor de Cuello"></div>
+                    <div class="pain-point" data-pain="midback" data-top="28%" data-left="50%" title="Dolor de Espalda Media"></div>
+                    <div class="pain-point" data-pain="lowerback" data-top="40%" data-left="50%" title="Dolor de Espalda Baja"></div>
+                    <div class="pain-point" data-pain="leftshoulder" data-top="20%" data-left="35%" title="Dolor de Hombro Izquierdo"></div>
+                    <div class="pain-point" data-pain="rightshoulder" data-top="20%" data-left="65%" title="Dolor de Hombro Derecho"></div>
+                    <div class="pain-point" data-pain="leftknee" data-top="70%" data-left="42%" title="Dolor de Rodilla Izquierda"></div>
+                    <div class="pain-point" data-pain="rightknee" data-top="70%" data-left="58%" title="Dolor de Rodilla Derecha"></div>
+                </div>
+                
+                <div class="instruction-box">
+                    <span id="instructionText">¡Haga clic donde siente dolor!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Information Popup -->
+    <div class="pain-popup" id="painPopup">
+        <div class="popup-overlay" id="popupOverlay"></div>
+        <div class="popup-content">
+            <button class="popup-close" id="popupClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-header">
+                <h3 id="painTitle">Dolor de Cuello</h3>
+            </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Causas Comunes</h4>
+                    <p id="painCauses">Las causas del dolor aparecerán aquí...</p>
+                </div>
+                <div class="popup-section">
+                    <h4><i class="fas fa-heart-pulse"></i> Cómo Podemos Ayudar</h4>
+                    <p id="painTreatment">La información del tratamiento aparecerá aquí...</p>
+                </div>
+                <div class="popup-actions">
+                    <a href="tel:+1-787-340-3222" class="popup-btn primary">
+                        <i class="fas fa-phone"></i>
+                        Agendar Consulta
+                    </a>
+                    <button class="popup-btn secondary" id="popupCloseBtn">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Dra. Nylet Ortiz</h2>
+                    <h3>Especialista en Quiropráctica</h3>
+                    <p>Con años de experiencia en el campo de la quiropráctica, la Dra. Nylet Ortiz se dedica a proporcionar atención personalizada y tratamientos efectivos para mejorar la calidad de vida de sus pacientes.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Formación Especializada</h4>
+                                <p>Certificada en técnicas quiroprácticas avanzadas</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Atención Personalizada</h4>
+                                <p>Cada tratamiento adaptado a las necesidades del paciente</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Disponibilidad</h4>
+                                <p>Citas el mismo día para emergencias</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dra. Nylet Ortiz">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="Inspine Logo.png" alt="Inspine Chiropractic" class="footer-logo-img">
+                        <h3>Inspine Chiropractic</h3>
+                    </div>
+                    <p>Alineando tu columna, transformando tu vida</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-phone"></i> Teléfono</h4>
+                    <p>+1 787-340-3222</p>
+                    <p>WA +1 787-340-3222</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-map-marker-alt"></i> Dirección</h4>
+                    <p>Isla Verde Mall Suite 212</p>
+                    <p>Carolina, PR 00979</p>
+                    <a href="https://maps.google.com" target="_blank" class="map-link">
+                        <i class="fas fa-external-link-alt"></i> Ver en mapa
+                    </a>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-envelope"></i> Email</h4>
+                    <p>inspine.pr@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-powered">
+                    <span>Powered by</span>
+                    <a href="https://www.nuvanaweb.com/" target="_blank" class="nuvana-link">
+                        <img src="Nuvana Logo.jpg" alt="Nuvana" class="nuvana-logo">
+                        <span>Nuvana</span>
+                    </a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Inspine Chiropractic. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/17873403222" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
