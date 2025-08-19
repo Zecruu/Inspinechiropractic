@@ -29,12 +29,29 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     background: rgba(45, 45, 45, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
-    padding: 0.8rem 0;
+    padding: 1rem 0;
+}
+
+/* Logo Animation Styles */
+.logo-animation {
+    width: 50px;
+    height: 50px;
+}
+
+.hero-logo-animation {
+    width: 120px;
+    height: 120px;
+}
+
+.footer-logo-animation {
+    width: 60px;
+    height: 60px;
 }
 
 .navbar.scrolled {

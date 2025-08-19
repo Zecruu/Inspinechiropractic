@@ -403,11 +403,41 @@ class LanguageSystem {
     }
 }
 
-// Initialize carousel when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new ServiceCarousel();
+// Initialize Lottie animations
+function initializeLottieAnimations() {
+    // Navigation logo animation
+    const navLogoAnimation = lottie.loadAnimation({
+        container: document.getElementById('nav-logo-animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'logo-spin.json'
+    });
+
+    // Hero logo animation
+    const heroLogoAnimation = lottie.loadAnimation({
+        container: document.getElementById('hero-logo-animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'logo-spin.json'
+    });
+
+    // Footer logo animation
+    const footerLogoAnimation = lottie.loadAnimation({
+        container: document.getElementById('footer-logo-animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'logo-spin.json'
+    });
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
     new PainDiagram();
     new LanguageSystem();
+    initializeLottieAnimations();
 });
 
 // Smooth scrolling for anchor links
