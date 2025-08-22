@@ -934,6 +934,50 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* Cookie Consent Banner */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(45, 45, 45, 0.95);
+    color: white;
+    padding: 1rem;
+    z-index: 10000;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.cookie-consent.show {
+    transform: translateY(0);
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cookie-content p {
+    margin: 0;
+    flex: 1;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cookie-buttons .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
 /* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed;
@@ -1064,36 +1108,33 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: rgba(45, 45, 45, 0.98);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        padding: 2rem 0;
+        display: flex;
+        flex-direction: row;
         gap: 1rem;
-    }
-
-    .nav-menu.active {
-        left: 0;
+        font-size: 0.85rem;
     }
 
     .hamburger {
-        display: flex;
+        display: none;
     }
 
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
+    .language-toggle {
+        margin: 0 0.5rem;
     }
 
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 0.8rem;
     }
 
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .cookie-buttons {
+        justify-content: center;
     }
 
     .hero-title {

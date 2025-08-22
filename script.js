@@ -301,14 +301,32 @@ class LanguageSystem {
                 
                 // Services
                 'Nuestros Servicios': 'Nuestros Servicios',
-                'Tratamientos especializados para tu bienestar': 'Tratamientos especializados para tu bienestar'
+                'Tratamientos especializados para tu bienestar': 'Tratamientos especializados para tu bienestar',
+                
+                // Service Cards
+                'Ajustes Quiroprácticos': 'Ajustes Quiroprácticos',
+                'Corrección precisa de la columna vertebral para aliviar el dolor y mejorar la movilidad.': 'Corrección precisa de la columna vertebral para aliviar el dolor y mejorar la movilidad.',
+                'Alivio del dolor': 'Alivio del dolor',
+                'Mejor movilidad': 'Mejor movilidad',
+                'Corrección postural': 'Corrección postural',
+                'Más información': 'Más información',
+                
+                // About Section
+                'Dra. Nylet Ortiz': 'Dra. Nylet Ortiz',
+                'Especialista en Quiropráctica': 'Especialista en Quiropráctica',
+                'Con años de experiencia en el campo de la quiropráctica, la Dra. Nylet Ortiz se dedica a proporcionar atención personalizada y tratamientos efectivos para mejorar la calidad de vida de sus pacientes.': 'Con años de experiencia en el campo de la quiropráctica, la Dra. Nylet Ortiz se dedica a proporcionar atención personalizada y tratamientos efectivos para mejorar la calidad de vida de sus pacientes.',
+                'Formación Especializada': 'Formación Especializada',
+                'Certificada en técnicas quiroprácticas avanzadas': 'Certificada en técnicas quiroprácticas avanzadas',
+                'Atención Personalizada': 'Atención Personalizada',
+                'Cada tratamiento adaptado a las necesidades del paciente': 'Cada tratamiento adaptado a las necesidades del paciente',
+                'Disponibilidad': 'Disponibilidad',
+                'Citas el mismo día para emergencias': 'Citas el mismo día para emergencias'
             },
             en: {
                 // Navigation
                 'Inicio': 'Home',
-                'Sobre Nosotros': 'About Us',
                 'Servicios': 'Services',
-                'Contacto': 'Contact',
+                'Artículos': 'Articles',
                 'LLAMA YA': 'CALL NOW',
                 
                 // Hero Section
@@ -328,7 +346,26 @@ class LanguageSystem {
                 
                 // Services
                 'Nuestros Servicios': 'Our Services',
-                'Tratamientos especializados para tu bienestar': 'Specialized treatments for your wellbeing'
+                'Tratamientos especializados para tu bienestar': 'Specialized treatments for your wellbeing',
+                
+                // Service Cards
+                'Ajustes Quiroprácticos': 'Chiropractic Adjustments',
+                'Corrección precisa de la columna vertebral para aliviar el dolor y mejorar la movilidad.': 'Precise spinal correction to relieve pain and improve mobility.',
+                'Alivio del dolor': 'Pain relief',
+                'Mejor movilidad': 'Better mobility',
+                'Corrección postural': 'Postural correction',
+                'Más información': 'More information',
+                
+                // About Section
+                'Dra. Nylet Ortiz': 'Dr. Nylet Ortiz',
+                'Especialista en Quiropráctica': 'Chiropractic Specialist',
+                'Con años de experiencia en el campo de la quiropráctica, la Dra. Nylet Ortiz se dedica a proporcionar atención personalizada y tratamientos efectivos para mejorar la calidad de vida de sus pacientes.': 'With years of experience in the field of chiropractic care, Dr. Nylet Ortiz is dedicated to providing personalized attention and effective treatments to improve her patients\' quality of life.',
+                'Formación Especializada': 'Specialized Training',
+                'Certificada en técnicas quiroprácticas avanzadas': 'Certified in advanced chiropractic techniques',
+                'Atención Personalizada': 'Personalized Care',
+                'Cada tratamiento adaptado a las necesidades del paciente': 'Each treatment adapted to the patient\'s needs',
+                'Disponibilidad': 'Availability',
+                'Citas el mismo día para emergencias': 'Same-day appointments for emergencies'
             }
         };
         
@@ -364,6 +401,12 @@ class LanguageSystem {
         
         // Update specific elements by ID
         this.updateSpecificElements(lang);
+        
+        // Update service cards
+        this.updateServiceCards(lang);
+        
+        // Update about section
+        this.updateAboutSection(lang);
     }
     
     updateSpecificElements(lang) {
@@ -401,6 +444,50 @@ class LanguageSystem {
         const scrollText = document.querySelector('.scroll-indicator span');
         if (scrollText) scrollText.textContent = translations['Desliza para explorar'];
     }
+    
+    updateServiceCards(lang) {
+        const translations = this.translations[lang];
+        
+        // Update service card content
+        const serviceTitle = document.querySelector('.service-card h3');
+        if (serviceTitle) serviceTitle.textContent = translations['Ajustes Quiroprácticos'];
+        
+        const serviceDescription = document.querySelector('.service-card p');
+        if (serviceDescription) serviceDescription.textContent = translations['Corrección precisa de la columna vertebral para aliviar el dolor y mejorar la movilidad.'];
+        
+        const serviceBenefits = document.querySelectorAll('.service-card ul li');
+        if (serviceBenefits[0]) serviceBenefits[0].textContent = translations['Alivio del dolor'];
+        if (serviceBenefits[1]) serviceBenefits[1].textContent = translations['Mejor movilidad'];
+        if (serviceBenefits[2]) serviceBenefits[2].textContent = translations['Corrección postural'];
+        
+        const serviceButton = document.querySelector('.service-card .btn');
+        if (serviceButton) serviceButton.textContent = translations['Más información'];
+    }
+    
+    updateAboutSection(lang) {
+        const translations = this.translations[lang];
+        
+        // Update about section content
+        const aboutTitle = document.querySelector('.about-text h2');
+        if (aboutTitle) aboutTitle.textContent = translations['Dra. Nylet Ortiz'];
+        
+        const aboutSubtitle = document.querySelector('.about-text .section-subtitle');
+        if (aboutSubtitle) aboutSubtitle.textContent = translations['Especialista en Quiropráctica'];
+        
+        const aboutDescription = document.querySelector('.about-text > p');
+        if (aboutDescription) aboutDescription.textContent = translations['Con años de experiencia en el campo de la quiropráctica, la Dra. Nylet Ortiz se dedica a proporcionar atención personalizada y tratamientos efectivos para mejorar la calidad de vida de sus pacientes.'];
+        
+        // Update about features
+        const aboutFeatures = document.querySelectorAll('.about-feature h4');
+        if (aboutFeatures[0]) aboutFeatures[0].textContent = translations['Formación Especializada'];
+        if (aboutFeatures[1]) aboutFeatures[1].textContent = translations['Atención Personalizada'];
+        if (aboutFeatures[2]) aboutFeatures[2].textContent = translations['Disponibilidad'];
+        
+        const aboutFeatureTexts = document.querySelectorAll('.about-feature p');
+        if (aboutFeatureTexts[0]) aboutFeatureTexts[0].textContent = translations['Certificada en técnicas quiroprácticas avanzadas'];
+        if (aboutFeatureTexts[1]) aboutFeatureTexts[1].textContent = translations['Cada tratamiento adaptado a las necesidades del paciente'];
+        if (aboutFeatureTexts[2]) aboutFeatureTexts[2].textContent = translations['Citas el mismo día para emergencias'];
+    }
 }
 
 // Initialize Lottie animations
@@ -433,10 +520,71 @@ function initializeLottieAnimations() {
     });
 }
 
+// Cookie Consent System
+class CookieConsent {
+    constructor() {
+        this.banner = document.getElementById('cookieConsent');
+        this.acceptBtn = document.getElementById('acceptCookies');
+        this.declineBtn = document.getElementById('declineCookies');
+        this.init();
+    }
+    
+    init() {
+        // Check if user has already made a choice
+        if (!this.getCookie('cookieConsent')) {
+            this.showBanner();
+        }
+        
+        // Add event listeners
+        this.acceptBtn.addEventListener('click', () => this.acceptCookies());
+        this.declineBtn.addEventListener('click', () => this.declineCookies());
+    }
+    
+    showBanner() {
+        setTimeout(() => {
+            this.banner.classList.add('show');
+        }, 1000);
+    }
+    
+    hideBanner() {
+        this.banner.classList.remove('show');
+    }
+    
+    acceptCookies() {
+        this.setCookie('cookieConsent', 'accepted', 365);
+        this.hideBanner();
+        console.log('Cookies accepted');
+    }
+    
+    declineCookies() {
+        this.setCookie('cookieConsent', 'declined', 365);
+        this.hideBanner();
+        console.log('Cookies declined');
+    }
+    
+    setCookie(name, value, days) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+    }
+    
+    getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     new PainDiagram();
     new LanguageSystem();
+    new CookieConsent();
     initializeLottieAnimations();
 });
 
