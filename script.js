@@ -33,66 +33,66 @@ class ServiceCarousel {
         this.cards = document.querySelectorAll('.service-card');
         this.currentSlide = 0;
         this.totalSlides = this.cards.length;
-        
+
         this.init();
     }
-    
+
     init() {
         // Add event listeners
         this.prevBtn.addEventListener('click', () => this.prevSlide());
         this.nextBtn.addEventListener('click', () => this.nextSlide());
-        
+
         // Add indicator click events
         this.indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => this.goToSlide(index));
         });
-        
+
         // Auto-play carousel
         this.startAutoPlay();
-        
+
         // Pause auto-play on hover
         const carousel = document.querySelector('.services-carousel');
         carousel.addEventListener('mouseenter', () => this.stopAutoPlay());
         carousel.addEventListener('mouseleave', () => this.startAutoPlay());
     }
-    
+
     updateCarousel() {
         // Move track
         const translateX = -this.currentSlide * 100;
         this.track.style.transform = `translateX(${translateX}%)`;
-        
+
         // Update indicators
         this.indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === this.currentSlide);
         });
-        
+
         // Update card states
         this.cards.forEach((card, index) => {
             card.classList.toggle('active', index === this.currentSlide);
         });
     }
-    
+
     nextSlide() {
         this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
         this.updateCarousel();
     }
-    
+
     prevSlide() {
         this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
         this.updateCarousel();
     }
-    
+
     goToSlide(index) {
         this.currentSlide = index;
         this.updateCarousel();
     }
-    
+
     startAutoPlay() {
         this.autoPlayInterval = setInterval(() => {
             this.nextSlide();
         }, 5000);
     }
-    
+
     stopAutoPlay() {
         if (this.autoPlayInterval) {
             clearInterval(this.autoPlayInterval);
@@ -212,14 +212,14 @@ class PainDiagram {
         this.painTitle = document.getElementById('painTitle');
         this.painCauses = document.getElementById('painCauses');
         this.painTreatment = document.getElementById('painTreatment');
-        
+
         this.init();
     }
-    
+
     init() {
         // Position pain points
         this.positionPainPoints();
-        
+
         // Add click events to pain points
         document.querySelectorAll('.pain-point').forEach(point => {
             point.addEventListener('click', (e) => {
@@ -227,12 +227,12 @@ class PainDiagram {
                 this.showPainInfo(painType);
             });
         });
-        
+
         // Add close events
         this.popupClose.addEventListener('click', () => this.closePainInfo());
         this.popupCloseBtn.addEventListener('click', () => this.closePainInfo());
         this.popupOverlay.addEventListener('click', () => this.closePainInfo());
-        
+
         // Close on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.popup.classList.contains('active')) {
@@ -240,7 +240,7 @@ class PainDiagram {
             }
         });
     }
-    
+
     positionPainPoints() {
         document.querySelectorAll('.pain-point').forEach(point => {
             const top = point.getAttribute('data-top');
@@ -249,22 +249,22 @@ class PainDiagram {
             point.style.left = left;
         });
     }
-    
+
     showPainInfo(painType) {
         const data = painPointData[painType];
         if (!data) return;
-        
+
         // Get current language from the language system
         const currentLang = document.querySelector('.lang-btn.active').getAttribute('data-lang') || 'es';
-        
+
         this.painTitle.textContent = data.title[currentLang];
         this.painCauses.textContent = data.causes[currentLang];
         this.painTreatment.textContent = data.treatment[currentLang];
-        
+
         this.popup.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
-    
+
     closePainInfo() {
         this.popup.classList.remove('active');
         document.body.style.overflow = '';
@@ -283,7 +283,7 @@ class LanguageSystem {
                 'Servicios': 'Servicios',
                 'Contacto': 'Contacto',
                 'LLAMA YA': 'LLAMA YA',
-                
+
                 // Hero Section
                 'Alineando tu columna, transformando tu vida': 'Alineando tu columna, transformando tu vida',
                 'Quiropráctica personalizada con la Dra. Nylet Ortiz': 'Quiropráctica personalizada con la Dra. Nylet Ortiz',
@@ -293,16 +293,16 @@ class LanguageSystem {
                 'Especialista certificada': 'Especialista certificada',
                 'Carolina, Puerto Rico': 'Carolina, Puerto Rico',
                 'Desliza para explorar': 'Desliza para explorar',
-                
+
                 // Pain Diagram
                 '¿Dónde Siente Dolor?': '¿Dónde Siente Dolor?',
                 'Haga clic en el área donde experimenta molestias para obtener información específica': 'Haga clic en el área donde experimenta molestias para obtener información específica',
                 '¡Haga clic donde siente dolor!': '¡Haga clic donde siente dolor!',
-                
+
                 // Services
                 'Nuestros Servicios': 'Nuestros Servicios',
                 'Tratamientos especializados para tu bienestar': 'Tratamientos especializados para tu bienestar',
-                
+
                 // Service Cards
                 'Ajustes Quiroprácticos': 'Ajustes Quiroprácticos',
                 'Corrección precisa de la columna vertebral para aliviar el dolor y mejorar la movilidad.': 'Corrección precisa de la columna vertebral para aliviar el dolor y mejorar la movilidad.',
@@ -310,7 +310,7 @@ class LanguageSystem {
                 'Mejor movilidad': 'Mejor movilidad',
                 'Corrección postural': 'Corrección postural',
                 'Más información': 'Más información',
-                
+
                 // About Section
                 'Dra. Nylet Ortiz': 'Dra. Nylet Ortiz',
                 'Especialista en Quiropráctica': 'Especialista en Quiropráctica',
@@ -328,7 +328,7 @@ class LanguageSystem {
                 'Servicios': 'Services',
                 'Artículos': 'Articles',
                 'LLAMA YA': 'CALL NOW',
-                
+
                 // Hero Section
                 'Alineando tu columna, transformando tu vida': 'Aligning your spine, transforming your life',
                 'Quiropráctica personalizada con la Dra. Nylet Ortiz': 'Personalized chiropractic care with Dr. Nylet Ortiz',
@@ -338,16 +338,16 @@ class LanguageSystem {
                 'Especialista certificada': 'Certified specialist',
                 'Carolina, Puerto Rico': 'Carolina, Puerto Rico',
                 'Desliza para explorar': 'Scroll to explore',
-                
+
                 // Pain Diagram
                 '¿Dónde Siente Dolor?': 'Where Do You Feel Pain?',
                 'Haga clic en el área donde experimenta molestias para obtener información específica': 'Click on the area where you experience discomfort to get specific information',
                 '¡Haga clic donde siente dolor!': 'Click where you feel pain!',
-                
+
                 // Services
                 'Nuestros Servicios': 'Our Services',
                 'Tratamientos especializados para tu bienestar': 'Specialized treatments for your wellbeing',
-                
+
                 // Service Cards
                 'Ajustes Quiroprácticos': 'Chiropractic Adjustments',
                 'Corrección precisa de la columna vertebral para aliviar el dolor y mejorar la movilidad.': 'Precise spinal correction to relieve pain and improve mobility.',
@@ -355,7 +355,7 @@ class LanguageSystem {
                 'Mejor movilidad': 'Better mobility',
                 'Corrección postural': 'Postural correction',
                 'Más información': 'More information',
-                
+
                 // About Section
                 'Dra. Nylet Ortiz': 'Dr. Nylet Ortiz',
                 'Especialista en Quiropráctica': 'Chiropractic Specialist',
@@ -368,10 +368,10 @@ class LanguageSystem {
                 'Citas el mismo día para emergencias': 'Same-day appointments for emergencies'
             }
         };
-        
+
         this.init();
     }
-    
+
     init() {
         // Add click events to language buttons
         document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -381,16 +381,16 @@ class LanguageSystem {
             });
         });
     }
-    
+
     switchLanguage(lang) {
         this.currentLang = lang;
-        
+
         // Update active button
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.remove('active');
         });
         document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
-        
+
         // Update all translatable elements
         document.querySelectorAll('[data-es][data-en]').forEach(element => {
             const translation = element.getAttribute(`data-${lang}`);
@@ -398,91 +398,91 @@ class LanguageSystem {
                 element.textContent = translation;
             }
         });
-        
+
         // Update specific elements by ID
         this.updateSpecificElements(lang);
-        
+
         // Update service cards
         this.updateServiceCards(lang);
-        
+
         // Update about section
         this.updateAboutSection(lang);
     }
-    
+
     updateSpecificElements(lang) {
         const translations = this.translations[lang];
-        
+
         // Update section headers
         const painTitle = document.querySelector('.pain-diagram .section-header h2');
         if (painTitle) painTitle.textContent = translations['¿Dónde Siente Dolor?'];
-        
+
         const painSubtitle = document.querySelector('.pain-diagram .section-header p');
         if (painSubtitle) painSubtitle.textContent = translations['Haga clic en el área donde experimenta molestias para obtener información específica'];
-        
+
         const instructionText = document.getElementById('instructionText');
         if (instructionText) instructionText.textContent = translations['¡Haga clic donde siente dolor!'];
-        
+
         const servicesTitle = document.querySelector('.services .section-header h2');
         if (servicesTitle) servicesTitle.textContent = translations['Nuestros Servicios'];
-        
+
         const servicesSubtitle = document.querySelector('.services .section-header p');
         if (servicesSubtitle) servicesSubtitle.textContent = translations['Tratamientos especializados para tu bienestar'];
-        
+
         // Update hero section
         const heroSlogan = document.querySelector('.hero-slogan');
         if (heroSlogan) heroSlogan.textContent = translations['Alineando tu columna, transformando tu vida'];
-        
+
         const heroSubtitle = document.querySelector('.hero-subtitle');
         if (heroSubtitle) heroSubtitle.textContent = translations['Quiropráctica personalizada con la Dra. Nylet Ortiz'];
-        
+
         // Update hero features
         const features = document.querySelectorAll('.feature span');
         if (features[0]) features[0].textContent = translations['Citas el mismo día'];
         if (features[1]) features[1].textContent = translations['Especialista certificada'];
         if (features[2]) features[2].textContent = translations['Carolina, Puerto Rico'];
-        
+
         const scrollText = document.querySelector('.scroll-indicator span');
         if (scrollText) scrollText.textContent = translations['Desliza para explorar'];
     }
-    
+
     updateServiceCards(lang) {
         const translations = this.translations[lang];
-        
+
         // Update service card content
         const serviceTitle = document.querySelector('.service-card h3');
         if (serviceTitle) serviceTitle.textContent = translations['Ajustes Quiroprácticos'];
-        
+
         const serviceDescription = document.querySelector('.service-card p');
         if (serviceDescription) serviceDescription.textContent = translations['Corrección precisa de la columna vertebral para aliviar el dolor y mejorar la movilidad.'];
-        
+
         const serviceBenefits = document.querySelectorAll('.service-card ul li');
         if (serviceBenefits[0]) serviceBenefits[0].textContent = translations['Alivio del dolor'];
         if (serviceBenefits[1]) serviceBenefits[1].textContent = translations['Mejor movilidad'];
         if (serviceBenefits[2]) serviceBenefits[2].textContent = translations['Corrección postural'];
-        
+
         const serviceButton = document.querySelector('.service-card .btn');
         if (serviceButton) serviceButton.textContent = translations['Más información'];
     }
-    
+
     updateAboutSection(lang) {
         const translations = this.translations[lang];
-        
+
         // Update about section content
         const aboutTitle = document.querySelector('.about-text h2');
         if (aboutTitle) aboutTitle.textContent = translations['Dra. Nylet Ortiz'];
-        
+
         const aboutSubtitle = document.querySelector('.about-text .section-subtitle');
         if (aboutSubtitle) aboutSubtitle.textContent = translations['Especialista en Quiropráctica'];
-        
+
         const aboutDescription = document.querySelector('.about-text > p');
         if (aboutDescription) aboutDescription.textContent = translations['Con años de experiencia en el campo de la quiropráctica, la Dra. Nylet Ortiz se dedica a proporcionar atención personalizada y tratamientos efectivos para mejorar la calidad de vida de sus pacientes.'];
-        
+
         // Update about features
         const aboutFeatures = document.querySelectorAll('.about-feature h4');
         if (aboutFeatures[0]) aboutFeatures[0].textContent = translations['Formación Especializada'];
         if (aboutFeatures[1]) aboutFeatures[1].textContent = translations['Atención Personalizada'];
         if (aboutFeatures[2]) aboutFeatures[2].textContent = translations['Disponibilidad'];
-        
+
         const aboutFeatureTexts = document.querySelectorAll('.about-feature p');
         if (aboutFeatureTexts[0]) aboutFeatureTexts[0].textContent = translations['Certificada en técnicas quiroprácticas avanzadas'];
         if (aboutFeatureTexts[1]) aboutFeatureTexts[1].textContent = translations['Cada tratamiento adaptado a las necesidades del paciente'];
@@ -528,46 +528,46 @@ class CookieConsent {
         this.declineBtn = document.getElementById('declineCookies');
         this.init();
     }
-    
+
     init() {
         // Check if user has already made a choice
         if (!this.getCookie('cookieConsent')) {
             this.showBanner();
         }
-        
+
         // Add event listeners
         this.acceptBtn.addEventListener('click', () => this.acceptCookies());
         this.declineBtn.addEventListener('click', () => this.declineCookies());
     }
-    
+
     showBanner() {
         setTimeout(() => {
             this.banner.classList.add('show');
         }, 1000);
     }
-    
+
     hideBanner() {
         this.banner.classList.remove('show');
     }
-    
+
     acceptCookies() {
         this.setCookie('cookieConsent', 'accepted', 365);
         this.hideBanner();
         console.log('Cookies accepted');
     }
-    
+
     declineCookies() {
         this.setCookie('cookieConsent', 'declined', 365);
         this.hideBanner();
         console.log('Cookies declined');
     }
-    
+
     setCookie(name, value, days) {
         const expires = new Date();
         expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
         document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
     }
-    
+
     getCookie(name) {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -582,6 +582,7 @@ class CookieConsent {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    new ServiceCarousel();
     new PainDiagram();
     new LanguageSystem();
     new CookieConsent();
@@ -649,7 +650,7 @@ document.querySelectorAll('.btn, .service-btn, .nav-cta').forEach(btn => {
     btn.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-2px)';
     });
-    
+
     btn.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0)';
     });
@@ -667,7 +668,7 @@ document.querySelectorAll('a[href^="tel:"]').forEach(tel => {
 function validateForm(form) {
     const inputs = form.querySelectorAll('input[required], textarea[required]');
     let isValid = true;
-    
+
     inputs.forEach(input => {
         if (!input.value.trim()) {
             input.classList.add('error');
@@ -676,7 +677,7 @@ function validateForm(form) {
             input.classList.remove('error');
         }
     });
-    
+
     return isValid;
 }
 
@@ -699,7 +700,7 @@ function preloadImages() {
         'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     ];
-    
+
     imageUrls.forEach(url => {
         const img = new Image();
         img.src = url;
@@ -725,7 +726,7 @@ document.querySelector('.carousel-container').addEventListener('touchend', (e) =
 function handleSwipe() {
     const threshold = 50;
     const diff = startX - endX;
-    
+
     if (Math.abs(diff) > threshold) {
         if (diff > 0) {
             // Swipe left - next slide

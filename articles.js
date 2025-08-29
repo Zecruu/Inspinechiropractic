@@ -119,7 +119,7 @@ function initSmoothScrolling() {
 // Navbar scroll effect
 function initNavbarScroll() {
     const navbar = document.getElementById('navbar');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -129,19 +129,40 @@ function initNavbarScroll() {
     });
 }
 
+// Set up CTA behavior: mobile -> call; desktop -> WhatsApp
+function initArticleCTAs() {
+    const telUrl = 'tel:+1-787-340-3222';
+    const waUrl = 'https://wa.me/17873403222';
+    const isMobile = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    const handler = (e) => {
+        e.preventDefault();
+        if (isMobile()) {
+            window.location.href = telUrl;
+        } else {
+            window.open(waUrl, '_blank');
+        }
+    };
+
+    // Buttons at end of articles and on articles listing CTA
+    document.querySelectorAll('.article-cta a.btn, .cta-section a.btn')
+        .forEach(btn => btn.addEventListener('click', handler));
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     new ArticlesLanguageSystem();
     new CookieConsent();
     initSmoothScrolling();
     initNavbarScroll();
-    
+    initArticleCTAs();
+
     // Add scroll animations to article cards
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -150,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-    
+
     // Observe article cards for animation
     document.querySelectorAll('.article-card').forEach(card => {
         card.style.opacity = '0';

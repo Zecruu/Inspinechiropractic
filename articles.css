@@ -1,5 +1,175 @@
 /* Articles Page Styles */
 
+/* Individual Article Page Styles */
+.article-header {
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.9), rgba(212, 175, 55, 0.1)),
+                url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1920&h=400&fit=crop&crop=center');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 60px;
+    color: white;
+}
+
+.article-breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.article-breadcrumb a {
+    color: #D4AF37;
+    text-decoration: none;
+}
+
+.article-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.article-breadcrumb span {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0.5rem;
+}
+
+.article-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+    line-height: 1.2;
+}
+
+.article-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.article-content-section {
+    padding: 60px 0;
+    background: white;
+}
+
+.article-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.article-body .article-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.article-body .article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-es, .content-en {
+    padding: 3rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.content-es h2, .content-en h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 0.5rem;
+}
+
+.content-es h3, .content-en h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.content-es h4, .content-en h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin: 1.2rem 0 0.8rem 0;
+}
+
+.content-es p, .content-en p {
+    margin-bottom: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+.content-es ul, .content-en ul {
+    margin: 1rem 0 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.content-es li, .content-en li {
+    margin-bottom: 0.5rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.content-es strong, .content-en strong {
+    color: #2D2D2D;
+    font-weight: 600;
+}
+
+.article-cta {
+    background: linear-gradient(135deg, #2D2D2D, #3D3D3D);
+    padding: 3rem;
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+}
+
+.article-cta h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #D4AF37;
+}
+
+.article-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.back-to-articles {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #D4AF37;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.back-to-articles:hover {
+    background: #B8941F;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.back-to-articles i {
+    font-size: 0.9rem;
+}
+
 .articles-hero {
     background: linear-gradient(135deg, rgba(45, 45, 45, 0.9), rgba(212, 175, 55, 0.1)),
                 url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1920&h=600&fit=crop&crop=center');
@@ -124,11 +294,24 @@
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid #D4AF37;
+    background: transparent;
+    min-height: 44px;
+    min-width: 44px;
+    line-height: 1.4;
+    text-align: center;
 }
 
 .read-more:hover {
-    color: #B8941F;
-    text-decoration: underline;
+    color: white;
+    background: #D4AF37;
+    border-color: #D4AF37;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
 .cta-section {
@@ -195,8 +378,83 @@
     white-space: nowrap;
 }
 
+/* Desktop Full Width Layout */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 95%;
+        width: 95%;
+    }
+    
+    .article-body {
+        max-width: 95%;
+    }
+    
+    .content-es, .content-en {
+        padding: 4rem 6rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 90%;
+        width: 90%;
+    }
+    
+    .article-body {
+        max-width: 90%;
+    }
+    
+    .content-es, .content-en {
+        padding: 4rem 8rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .article-header {
+        padding: 100px 0 40px;
+    }
+    
+    .article-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .article-meta {
+        font-size: 0.8rem;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .article-body {
+        margin: 0 1rem;
+        border-radius: 10px;
+    }
+    
+    .content-es, .content-en {
+        padding: 2rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .content-es h2, .content-en h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-es h3, .content-en h3 {
+        font-size: 1.3rem;
+    }
+    
+    .article-cta {
+        padding: 2rem 1.5rem;
+    }
+    
+    .article-cta h3 {
+        font-size: 1.5rem;
+    }
+    
+    .back-to-articles {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
     .articles-hero h1 {
         font-size: 2rem;
     }
@@ -244,5 +502,25 @@
     
     .article-content {
         padding: 1rem;
+    }
+    
+    .article-header {
+        padding: 90px 0 30px;
+    }
+    
+    .article-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .content-es, .content-en {
+        padding: 1.5rem 1rem;
+    }
+    
+    .content-es h2, .content-en h2 {
+        font-size: 1.3rem;
+    }
+    
+    .article-cta {
+        padding: 1.5rem 1rem;
     }
 }
